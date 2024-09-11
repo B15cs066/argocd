@@ -1,12 +1,11 @@
 apiVersion: apps/v1
-kind: deamonset
+kind: DaemonSet
 metadata:
   labels:
     app: train
   name: train-deploy
-spec:
-  replicas: 3
-  selector:
+spec: 
+ selector:
     matchLabels:
       app: train
   template:
